@@ -23,8 +23,9 @@ cd FavoriteTune
 ## Create a virtual environment:
 venv\Scripts\activate
 ## Apply Migration
-~python manage.py makemigration
-~python manage.py migrate
+
+~ python manage.py makemigrations
+~ python manage.py migrate
 ## Run server
 python manage.py runserver
 ## Usage
