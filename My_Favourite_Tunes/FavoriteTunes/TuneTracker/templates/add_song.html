@@ -1,0 +1,19 @@
+<!-- TuneTracker/templates/add_song.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Song</title>
+</head>
+<body>
+    <h1>Add New Song</h1>
+    <form method="post" action="{% url 'add_song' %}">
+        {% csrf_token %}
+        {{ artist_form.as_p }}
+        {{ song_form.as_p }}
+        <button type="submit">Add Song</button>
+    </form>
+    <a href="{% url 'song_list' %}">Back to Song List</a>
+</body>
+</html>
